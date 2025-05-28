@@ -1,14 +1,15 @@
 {
   "manifest_version": 3,
-  "name": "日本MEOエキスパート DM送信ツール",
+  "name": "MEO Outreach Automator",
   "version": "1.0",
-  "description": "Google Mapsで低評価の店舗に自動で問い合わせDMを送信するツール",
+  "description": "Automates outreach to low-rated businesses for MEO improvement services",
   "permissions": [
     "activeTab",
     "scripting",
     "storage",
+    "identity",
     "tabs",
-    "identity"
+    "alarms"
   ],
   "host_permissions": [
     "https://*.google.com/*",
@@ -19,7 +20,7 @@
     "type": "module"
   },
   "action": {
-    "default_popup": "popup/popup.html",
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
@@ -32,7 +33,7 @@
     "128": "icons/icon128.png"
   },
   "oauth2": {
-    "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+    "client_id": "900055940860-dm70jag3ahkoup680mmdo141iouubrfi.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/spreadsheets"
     ]

@@ -1,0 +1,119 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MEO Outreach Automator</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select {
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:disabled {
+      background-color: #cccccc;
+    }
+    button.stop {
+      background-color: #f44336;
+    }
+    .stats {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+    }
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+    .progress-container {
+      margin-top: 10px;
+      height: 20px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      background-color: #4CAF50;
+      width: 0%;
+      transition: width 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>MEO Outreach Automator</h2>
+    
+    <div class="input-group">
+      <label for="location">Location (lat,lng):</label>
+      <input type="text" id="location" placeholder="35.658034,139.701636" value="35.658034,139.701636">
+    </div>
+    
+    <div class="input-group">
+      <label for="radius">Radius (meters):</label>
+      <input type="number" id="radius" placeholder="1000" value="1000">
+    </div>
+    
+    <div class="input-group">
+      <label for="keyword">Business Type:</label>
+      <input type="text" id="keyword" placeholder="restaurant" value="restaurant">
+    </div>
+    
+    <button id="startBtn">Start Outreach</button>
+    <button id="stopBtn" class="stop" disabled>Stop</button>
+    
+    <div class="stats">
+      <div class="stat-row">
+        <span>Processed:</span>
+        <span id="processedCount">0</span>
+      </div>
+      <div class="stat-row">
+        <span>Sent:</span>
+        <span id="sentCount">0</span>
+      </div>
+      <div class="stat-row">
+        <span>Skipped:</span>
+        <span id="skippedCount">0</span>
+      </div>
+      <div class="stat-row">
+        <span>Errors:</span>
+        <span id="errorCount">0</span>
+      </div>
+    </div>
+    
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

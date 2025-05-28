@@ -1,0 +1,23 @@
+# data/blacklist.csv
+# Format: One regular expression per line to match against business names
+# Lines starting with # are comments
+^スターバックス
+^マクドナルド
+^すき家
+^吉野家
+^ロイヤルホスト
+^デニーズ
+^コメダ珈琲店
+^ミスタードーナツ
+^モスバーガー
+^ケンタッキー
+^ほっともっと
+^はなまるうどん
+^王将
+^バーミヤン
+^ガスト
+^サイゼリヤ
+^ジョナサン
+^ココス
+^ビッグボーイ
+^すし銚子丸
